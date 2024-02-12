@@ -1,3 +1,6 @@
-import { sayHello } from './demo';
+import { rangeElement, buttonElement } from './dom';
 
-sayHello();
+import { generatePassword, updatePasswordLength } from './password-functions';
+
+rangeElement.addEventListener('input', updatePasswordLength);
+buttonElement.addEventListener('click', generatePassword);

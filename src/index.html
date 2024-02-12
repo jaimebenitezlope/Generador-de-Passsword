@@ -2,16 +2,46 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<link rel="icon" type="image/svg+xml" href="/assets/images/vite.svg" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="css/base/normalize.css" />
-		<link rel="stylesheet" href="css/base/base.css" />
-		<link rel="stylesheet" href="css/styles.css" />
-		<title>Vite App</title>
+		<title>Password Generator</title>
+		<link rel="stylesheet" href="./css/styles.css" />
 	</head>
 	<body>
-		<h1>WEB WITH VITE</h1>
-		<!-- <img src="./assets/images/cute-cat.webp" alt="" /> -->
+		<div class="password-generator">
+			<h1>Password Generator</h1>
+
+			<input
+				type="text"
+				class="password"
+				id="password"
+				placeholder=""
+				readonly
+			/>
+
+			<div>
+				<label for="range" class="length"
+					>LENGTH: <span id="password-length">16</span></label
+				>
+			</div>
+
+			<div class="lengthSlider">
+				<span>4</span>
+
+				<input
+					id="range"
+					type="range"
+					class="lengthSlider-input"
+					min="4"
+					max="32"
+					step="1"
+					value="16"
+				/>
+
+				<span>32</span>
+			</div>
+
+			<button id="button-generate" class="button">Generate Password</button>
+		</div>
 		<script type="module" src="./js/index.js"></script>
 	</body>
 </html>
